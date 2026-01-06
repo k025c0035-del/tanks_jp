@@ -1,7 +1,28 @@
 @charset "UTF-8";
 
 /*共通*/
+/*アイコン*/
+/* 左上アイコン */
+.site-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: auto;
+  z-index: 10;
+}
 
+/* タイトル中央揃え */
+.intro h1,
+.intro h2 {
+  text-align: center;
+  margin: 0.2em 0;
+}
+
+/*アイコンを固定 */
+.intro {
+  position: relative;
+}
 /*動画*/
 .TK {
     width: 90%;
@@ -55,29 +76,37 @@ body {
 }
 
 
-/* 画像＋文字の重ね合わせ用 */
+/* メイン一覧・画像＋文字の重ね合わせ用 */
 .tank-card {
   position: relative;
   display: inline-block;
 }
 
+/*画像背景*/
 .tank-card img {
   display: block;
 }
 
 /* 画像上の文字 */
 .tank-label {
+  /*中央揃え・改行補正*/
+  max-width: 90%;  
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /*文字の調整*/
   position: absolute;
-  bottom: 8px;               
+  bottom: 10px;               
   left: 50%;
   transform: translateX(-50%);
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
-  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+  text-shadow: 10 7 6px rgba(0,0,0,0.7); /*文字の影*/
   background: rgba(0,0,0,0.3); /*文字の囲い*/
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 8px 12px;
+  border-radius: 15px;
   pointer-events: none;      
 }
 
@@ -92,6 +121,7 @@ body {
   margin: 10px 0;
 }
 
+/*選択バーの色とサイズ*/
 .category li a {
   display: block;
   padding: 12px 16px;
@@ -111,6 +141,19 @@ body {
 
 /* デスクトップ用（幅600px以上のサイズ） */
 @media screen and (min-width: 600px) {
+    /*タイトル（h1）*/
+  .intro h1 {
+    font-size: 2.8rem;      
+    margin-bottom: 0.5em;
+  }
+
+  /*サブタイトル（h2）*/
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  }
+
+  /*動画サイズ*/
   .TK {
     width: 100%;
     max-width: 800px;
@@ -152,6 +195,17 @@ body {
 
 /* スマホ用（幅600px以下） */
 @media screen and (max-width: 600px) {
+
+    /*タイトル（h1）*/
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.4rem;
+  }
+
+    /*動画サイズ*/
   .TK {
     width: 100%;
     height: auto;
