@@ -2,7 +2,187 @@
 
 /*共通*/
 
+/*動画*/
+.TK {
+    width: 90%;
+}
+/*webの囲い*/
+body {
+  font-family: 'Noto Serif JP', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  background-color: #a2beda;
+  color: white;
+  text-align: center;
+  padding: 2em;
+}
+
+.gallery, .category {
+  background-color: #e0f7fa;
+  border: 1px solid #ccc;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.tank-images img {
+  width: 200px;
+  margin: 0.5em;
+  border-radius: 6px;
+  border: 2px solid #aaa;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  background-color: #ddd;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #333;
+}
+
+
+/* 画像＋文字の重ね合わせ用 */
+.tank-card {
+  position: relative;
+  display: inline-block;
+}
+
+.tank-card img {
+  display: block;
+}
+
+/* 画像上の文字 */
+.tank-label {
+  position: absolute;
+  bottom: 8px;               
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3); /*文字の囲い*/
+  padding: 4px 10px;
+  border-radius: 4px;
+  pointer-events: none;      
+}
+
+/*選択バー*/
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category li {
+  margin: 10px 0;
+}
+
+.category li a {
+  display: block;
+  padding: 12px 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f8f8f8;
+  transition: 0.2s;
+}
+
+/* ホバー時の効果 */
+.category li a:hover {
+  background-color: #e0e0e0;
+  border-color: #000;
+}
+
+/* デスクトップ用（幅600px以上のサイズ） */
+@media screen and (min-width: 600px) {
+  .TK {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }  
+  body {
+    font-size: 18px;
+  }
+
+  /*メイン一覧・画像サイズ*/
+  .tank-images img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .intro video {
+    width: 100%;
+    max-width: 1200px;   /* サイズ変更可 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  /* 画像を横並びで大きめに */
+  .tank-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+
+}
+
+/* スマホ用（幅600px以下） */
+@media screen and (max-width: 600px) {
+  .TK {
+    width: 100%;
+    height: auto;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+  
+/*画像サイズ*/
+  .tank-images img { 
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .category li a {
+    font-size: 14px;
+    padding: 10px;
+  }
+    /* 動画をスマホ幅にフィット */
+  .intro video {
+    width: 100%;
+    height: auto;;
+  }
+
+}
 
 
 
-/*デスクトップ*/
+
+
+

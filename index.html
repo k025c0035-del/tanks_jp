@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="jp">
-    <haed>
+    <head>
         <meta charset="UTF-8">
         <title>陸上自衛隊_戦闘車</title>
         <meta name = "description" content="陸上自衛隊の戦闘車両などをまとめたサイト">
@@ -14,10 +14,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
     <!--オリジナルCSS-->
-    <link rel="stylesheet" href="./TANK.css">
+    <link rel="stylesheet" href="./css/TANK.css">
 
-    </haed>
+    </head>
     <body>
+        <main>
+  <section class="intro">
+    <!--タイトル-->
+    <h1>日本戦闘車両</h1>
+    <h2>陸上自衛隊</h2>
+
+    <!--動画-->
+    <video class="TK" src="./imag/main_video.mp4" autoplay muted loop>
+        
+    </video>
+  </section>
+
+  <!--メイン一覧-->
+  <section class="gallery">
+  <h3>現役のトップ車両</h3>
+  <div class="tank-images">
+
+    <div class="tank-card">
+      <a href="https://ja.wikipedia.org/wiki/10式戦車" target="_blank">
+        <img src="./imag/type10.jpg" alt="10式戦車">
+        <span class="tank-label">10式戦車</span>
+      </a>
+    </div>
+
+    <div class="tank-card">
+      <a href="https://ja.wikipedia.org/wiki/90式戦車" target="_blank">
+        <img src="./imag/type90.jpg" alt="90式戦車">
+        <span class="tank-label">90式戦車</span>
+      </a>
+    </div>
+
+    <div class="tank-card">
+      <a href="https://ja.wikipedia.org/wiki/89式装甲戦闘車" target="_blank">
+        <img src="./imag/ArmoredVehicle.jpg" alt="89式装甲戦闘車">
+        <span class="tank-label">89式装甲戦闘車</span>
+      </a>
+    </div>
+
+    <div class="tank-card">
+      <a href="https://ja.wikipedia.org/wiki/16式機動戦闘車" target="_blank">
+        <img src="./imag/type16.jpg" alt="16式機動戦闘車">
+        <span class="tank-label">16式機動戦闘車</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!--ページ選択-->
+  <section class="category">
+    <h3>車両カテゴリ</h3>
+    <ul>
+      <li><a href="MBT_TK_tank.html">主力戦車（MBT）</a></li>
+      <li><a href="IFV_tank.html">歩兵戦闘車（IFV）</a></li>
+      <li><a href="SPG_tank.html">自走砲（SPG）</a></li>
+    </ul>
+  </section>
+</main>
 
 
     </body>
