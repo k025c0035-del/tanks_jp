@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ホバー時：画像を隠し、動画を表示して再生
     card.addEventListener("mouseenter", () => {
-      img.style.display = "none";
+    //   img.style.display = "none"; <バグ
       video.style.display = "block";
       video.play();
     });

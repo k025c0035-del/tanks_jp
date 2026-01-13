@@ -110,6 +110,7 @@ body {
   pointer-events: none;      
 }
 
+
 /*選択バー*/
 .category ul {
   list-style: none;
@@ -146,17 +147,12 @@ body {
   overflow: hidden;
 }
 
-.tank-media img,
-.tank-media video {
-  width: 100%;
-  display: block;
-}
-
 .tank-video {
   position: absolute;
   top: 0;
   left: 0;
   display: none; /* 初期状態は非表示 */
+
 }
 
 /* デスクトップ用（幅600px以上のサイズ） */
@@ -185,8 +181,16 @@ body {
     font-size: 18px;
   }
 
+.tank-media {
+  position: relative;
+  width: 250px;   /* PC用の画像サイズに合わせる */
+  height: 160px;  
+  overflow: hidden;
+}
+
   /*メイン一覧・画像サイズ*/
-  .tank-images img {
+  .tank-images img,
+  .tank-media video {
     width: 250px;
     height: 160px;
     object-fit: cover;
@@ -210,8 +214,24 @@ body {
     flex-wrap: wrap;
   }
 
+/* 画像と動画を完全に重ねる */
+.tank-image,
+.tank-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像と動画の見え方を統一 */
+}
+
+/* 初期状態は動画を非表示 */
+.tank-video {
+  display: none;
+}
 
 }
+
 
 /* スマホ用（幅600px以下） */
 @media screen and (max-width: 600px) {
@@ -236,7 +256,8 @@ body {
   }
   
 /*画像サイズ*/
-  .tank-images img { 
+  .tank-images img,
+  .tank-media video { 
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -253,10 +274,26 @@ body {
     height: auto;;
   }
 
+  .tank-media {
+    height: auto;
+  }
+
+  .tank-media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3; /* 画像と同じ比率にする */
+  }
 }
 
 
 
 
 
-
+/* tank-card 内の画像はここで強制 */
+.tank-card .tank-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  margin: 0 !important;
+  border: none !important;
+}
