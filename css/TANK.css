@@ -139,6 +139,26 @@ body {
   border-color: #000;
 }
 
+/* 画像と動画の切り替え用（ホバー動画対応） */
+.tank-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tank-media img,
+.tank-media video {
+  width: 100%;
+  display: block;
+}
+
+.tank-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* 初期状態は非表示 */
+}
+
 /* デスクトップ用（幅600px以上のサイズ） */
 @media screen and (min-width: 600px) {
     /*タイトル（h1）*/
@@ -219,7 +239,7 @@ body {
   .tank-images img { 
     width: 100%;
     max-width: 300px;
-    height: 180px;
+    height: auto;
     object-fit: cover;
   }
 
