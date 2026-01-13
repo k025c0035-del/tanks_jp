@@ -155,6 +155,47 @@ body {
 
 }
 
+/*日本地図*/
+
+/*日本地図中央揃え*/
+.JPimg {
+  display: flex;
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center;     /* 縦方向の中央揃え（必要なら） */
+  width: 100%;
+}
+
+.JPimg img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*日本地図の詳細説明*/
+.legend ul {
+  list-style: none;
+  padding: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/* 行全体の背景色 */
+.bg-yellow { background: linear-gradient(90deg, rgba(255, 255, 0, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
+.bg-pink { background: linear-gradient(90deg,  rgba(220, 112, 253, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
+.bg-green { background: linear-gradient(90deg, rgba(76, 175, 80, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
+.bg-orange { background: linear-gradient(90deg, rgba(255, 136, 0, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
+.bg-bluepink {
+  background: linear-gradient(90deg, rgba(88, 184, 240, 0.25) 30%, rgba(250, 213, 231, 0.25) 70%);}
+
+
+  
 /* デスクトップ用（幅600px以上のサイズ） */
 @media screen and (min-width: 600px) {
     /*タイトル（h1）*/

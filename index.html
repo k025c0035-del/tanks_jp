@@ -47,7 +47,7 @@
     </div>
 
     <!-- 90式 -->
-    <div class="tank-card" data-video="./imag/type90_video.mp4">
+    <div class="tank-card" data-video="./imag/type90.mp4">
       <div class="tank-media">
         <img src="./imag/type90.jpg" alt="90式戦車" class="tank-image">
         <video class="tank-video" muted loop playsinline></video>
@@ -58,18 +58,18 @@
     </div>
 
     <!-- 89式装甲戦闘車 -->
-    <div class="tank-card" data-video="./imag/type89_video.mp4">
+    <div class="tank-card" data-video="./imag/type89.mp4">
       <div class="tank-media">
-        <img src="./imag/ArmoredVehicle.jpg" alt="89式装甲戦闘車" class="tank-image">
+        <img src="./imag/ArmoredVehicle.jpg" alt="軽装甲機動車" class="tank-image">
         <video class="tank-video" muted loop playsinline></video>
       </div>
       <a href="https://ja.wikipedia.org/wiki/89式装甲戦闘車" target="_blank">
-        <span class="tank-label">89式装甲戦闘車</span>
+        <span class="tank-label">軽装甲機動車</span>
       </a>
     </div>
 
     <!-- 16式 -->
-    <div class="tank-card" data-video="./imag/type16_video.mp4">
+    <div class="tank-card" data-video="./imag/type16.mp4">
       <div class="tank-media">
         <img src="./imag/type16.jpg" alt="16式機動戦闘車" class="tank-image">
         <video class="tank-video" muted loop playsinline></video>
@@ -80,7 +80,7 @@
     </div>
 
     <!-- 87式自走高射機関砲 -->
-    <div class="tank-card" data-video="./imag/type87_video.mp4">
+    <div class="tank-card" data-video="./imag/type87.mp4">
       <div class="tank-media">
         <img src="./imag/type87_SKY.jpg" alt="87式自走高射機関砲" class="tank-image">
         <video class="tank-video" muted loop playsinline></video>
@@ -91,7 +91,7 @@
     </div>
 
     <!-- 89式 -->
-    <div class="tank-card" data-video="./imag/type89_2_video.mp4">
+    <div class="tank-card" data-video="./imag/type89_2.mp4">
       <div class="tank-media">
         <img src="./imag/type89.jpg" alt="89式装甲戦闘車" class="tank-image">
         <video class="tank-video" muted loop playsinline></video>
@@ -114,33 +114,41 @@
       <li><a href="SPG_tank.html">自走砲（SPG）</a></li>
     </ul>
   </section>
-</main>
 
+<!-- 日本地図 -->
 <section class="JPimg">
-<img src="imag/JPmap.png" usemap="#japan-map" alt="日本地図" style="max-width: 100%; height: auto;" />
-
-
-<map name="japan-map">
-  <!-- 北海道 -->
-  <area shape="poly" coords="520,80,540,100,560,120,550,140,530,130,510,110" href="hokkaido.html" alt="北海道">
-
-  <!-- 東北（ピンク） -->
-  <area shape="poly" coords="480,160,500,180,520,200,510,220,490,210,470,190" href="tohoku.html" alt="東北">
-
-  <!-- 関東（緑） -->
-  <area shape="poly" coords="460,240,480,260,500,280,490,300,470,290,450,270" href="kanto.html" alt="関東">
-
-  <!-- 中部（オレンジ） -->
-  <area shape="poly" coords="420,260,440,280,460,300,450,320,430,310,410,290" href="chubu.html" alt="中部">
-
-  <!-- 西部（青） -->
-  <area shape="poly" coords="360,300,380,320,400,340,390,360,370,350,350,330" href="west.html" alt="西部">
-
-  <!-- 九州・沖縄（紫） -->
-  <area shape="poly" coords="280,360,300,380,320,400,310,420,290,410,270,390" href="kyushu.html" alt="九州・沖縄">
-</map>
+  <img src="imag/JPmap.jpg" usemap="#japan-map" alt="日本地図" >
 </section>
+<section class="legend">
+  <ul>
+    <li class="bg-yellow">
+      <span class="color-yellow"></span>
+      <span class="label">北部方面隊</span>
+      <span class="units">第2師団：第5旅団：第7師団：第11旅団</span>
+    </li>
 
-<script src="./js/script.js" defer></script>
-</body>
-</html>
+    <li class="bg-pink">
+      <span class="color-pink"></span>
+      <span class="label">東北方面隊</span>
+      <span class="units">第6師団：第9師団</span>
+    </li>
+
+    <li class="bg-green">
+      <span class="color-green"></span>
+      <span class="label">東部方面隊</span>
+      <span class="units">第1師団：第12旅団</span>
+    </li>
+
+    <li class="bg-orange">
+      <span class="color-orange"></span>
+      <span class="label">中部方面隊</span>
+      <span class="units">第3師団：第10師団：第13旅団：第14旅団</span>
+    </li>
+
+    <li class="bg-bluepink">
+      <span class="color-bluepink"></span>
+      <span class="label">西部方面隊</span>
+      <span class="units">第4師団：第8師団：第15旅団</span>
+    </li>
+  </ul>
+</section>
