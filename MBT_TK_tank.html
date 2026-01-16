@@ -1,24 +1,80 @@
 <!DOCTYPE html>
 <html lang="jp">
-    <haed>
-        <meta charset="UTF-8">
-        <title>陸上自衛隊_主力戦車</title>
-        <meta name = "description" content="陸上自衛隊の戦闘車両などをまとめたサイト">
+<head>
+    <meta charset="UTF-8">
+    <title>陸上自衛隊_主力戦車</title>
+    <meta name="description" content="陸上自衛隊の戦闘車両などをまとめたサイト">
 
-    <!--リセットCSS-->
+    <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
-    <!--Googleフォント-->
+    <!-- Googleフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
-    <!--オリジナルCSS-->
-    <link rel="stylesheet" href="./TANK.css">
+    <!-- オリジナルCSS -->
+    <link rel="stylesheet" href="./css/MBT_TK.css">
+</head>
 
-    </haed>
-    <body>
+<body>
+<main>
 
+    <!-- アイコン＋タイトル＋動画 -->
+    <section class="intro">
+        <img src="./imag/type96.jpg" alt="サイトアイコン" class="site-icon">
 
-    </body>
+        <h1>日本戦闘車両</h1>
+        <h2>陸上自衛隊</h2>
+
+        <video class="TK" src="./imag/main_video.mp4" autoplay muted loop></video>
+    </section>
+
+    <!-- メイン一覧 -->
+    <section class="gallery">
+        <h3>主力戦車達</h3>
+
+        <div class="tank-images">
+
+            <!-- 10式 -->
+            <div class="tank-media">
+                <img src="./imag/type10.jpg" alt="10式戦車" class="tank-image">
+                <video class="tank-video" muted loop playsinline></video>
+                <a href="https://ja.wikipedia.org/wiki/10式戦車" target="_blank">
+                    <span class="tank-label">10式戦車</span>
+                </a>
+            </div>
+
+            <!-- 90式 -->
+            <div class="tank-media">
+                <img src="./imag/type90.jpg" alt="90式戦車" class="tank-image">
+                <video class="tank-video" muted loop playsinline></video>
+                <a href="https://ja.wikipedia.org/wiki/90式戦車" target="_blank">
+                    <span class="tank-label">90式戦車</span>
+                </a>
+            </div>
+
+            <!-- 74式 -->
+            <div class="tank-media">
+                <img src="./imag/type74.jpg" alt="74式戦車" class="tank-image">
+                <video class="tank-video" muted loop playsinline></video>
+                <a href="https://ja.wikipedia.org/wiki/74式戦車" target="_blank">
+                    <span class="tank-label">74式戦車</span>
+                </a>
+            </div>
+
+            <!-- 61式 -->
+            <div class="tank-media">
+                <img src="./imag/type61.jpg" alt="61式戦車" class="tank-image">
+                <video class="tank-video" muted loop playsinline></video>
+                <a href="https://ja.wikipedia.org/wiki/61式戦車" target="_blank">
+                    <span class="tank-label">61式戦車</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+</body>
 </html>

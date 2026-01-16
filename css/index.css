@@ -155,6 +155,16 @@ body {
 
 }
 
+/*リンク拡張*/
+.tank-card .tank-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  margin: 0 !important;
+  border: none !important;
+}
+
+
 /*日本地図*/
 
 /*日本地図中央揃え*/
@@ -269,6 +279,7 @@ body {
 /* 初期状態は動画を非表示 */
 .tank-video {
   display: none;
+
 }
 
 }
@@ -326,10 +337,6 @@ body {
   }
 }
 
-
-
-
-
 /* tank-card 内の画像はここで強制 */
 .tank-card .tank-image {
   width: 100% !important;
@@ -338,3 +345,4 @@ body {
   margin: 0 !important;
   border: none !important;
 }
+
