@@ -14,10 +14,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
     <!--オリジナルCSS-->
-    <link rel="stylesheet" href="./css/TANK.css">
+    <link rel="stylesheet" href="./css/MBT_TK.css">
 
     </haed>
     <body>
+        </head>
+    <body>
+        <main>
+        <!--アイコン-->
+    <section class="intro">
+        <img src="./imag/type96.jpg" alt="サイトアイコン" class="site-icon">
+            <!--タイトル-->
+            <h1>日本戦闘車両</h1>
+            <h2>陸上自衛隊</h2>
+    <!--動画-->
+    <video class="TK" src="./imag/main_video.mp4" autoplay muted loop></video></section>
+
+
+
+  <!--メイン一覧-->
+<section class="gallery">
+  <h3>人気トップ装備</h3>
+  <div class="tank-images">
+
+    <!-- 10式 -->
+    <div class="tank-card" data-video="./imag/type10.mp4">
+      <div class="tank-media">
+        <img src="./imag/type10.jpg" alt="10式" class="tank-image">
+        <video class="tank-video" muted loop playsinline></video>
+      </div>
+      <a href="https://ja.wikipedia.org/wiki/10式戦車" target="_blank"></a>
+      <span class="tank-label">10式戦車</span>
+    </div>
+
+    <!-- 90式 -->
+    <div class="tank-card" data-video="./imag/type90.mp4">
+      <div class="tank-media">
+        <img src="./imag/type90.jpg" alt="90式戦車" class="tank-image">
+        <video class="tank-video" muted loop playsinline></video>
+      </div>
+      <a href="https://ja.wikipedia.org/wiki/90式戦車" target="_blank">
+        <span class="tank-label">90式戦車</span>
+      </a>
+    </div>
+
+    <!-- 89式装甲戦闘車 -->
+    <div class="tank-card" data-video="./imag/type89.mp4">
+      <div class="tank-media">
+        <img src="./imag/ArmoredVehicle.jpg" alt="軽装甲機動車" class="tank-image">
+        <video class="tank-video" muted loop playsinline></video>
+      </div>
+      <a href="https://ja.wikipedia.org/wiki/89式装甲戦闘車" target="_blank">
+        <span class="tank-label">軽装甲機動車</span>
+      </a>
+    </div>
+
+    <!-- 16式 -->
+    <div class="tank-card" data-video="./imag/type16.mp4">
+      <div class="tank-media">
+        <img src="./imag/type16.jpg" alt="16式機動戦闘車" class="tank-image">
+        <video class="tank-video" muted loop playsinline></video>
+      </div>
+      <a href="https://ja.wikipedia.org/wiki/16式機動戦闘車" target="_blank">
+        <span class="tank-label">16式機動戦闘車</span>
+      </a>
+    </div>
+
+    <!-- 87式自走高射機関砲 -->
+    <div class="tank-card" data-video="./imag/type87.mp4">
+      <div class="tank-media">
+        <img src="./imag/type87_SKY.jpg" alt="87式自走高射機関砲" class="tank-image">
+        <video class="tank-video" muted loop playsinline></video>
+      </div>
+      <a href="https://ja.wikipedia.org/wiki/87式自走高射機関砲" target="_blank">
+        <span class="tank-label">87式自走高射機関砲</span>
+      </a>
+    </div>
+
+    <!-- 89式 -->
+    <div class="tank-card" data-video="./imag/type89_2.mp4">
+      <div class="tank-media">
+        <img src="./imag/type89.jpg" alt="89式装甲戦闘車" class="tank-image">
+        <video class="tank-video" muted loop playsinline></video>
+      </div>
+      <a href="https://ja.wikipedia.org/wiki/89式装甲戦闘車" target="_blank">
+        <span class="tank-label">89式装甲戦闘車</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+  
+
+<!--ページ選択-->
+  <section class="category">
+    <h3>装備カテゴリ</h3>
+    <ul>
+      <li><a href="MBT_TK_tank.html">主力戦車（MBT）</a></li>
+      <li><a href="IFV_tank.html">歩兵戦闘車（IFV）</a></li>
+      <li><a href="SPG_tank.html">自走砲（SPG）</a></li>
+    </ul>
+  </section>
+
+  
+<!-- 日本地図 -->
+<section class="JPimg">
+  <img src="imag/JPmap.jpg" usemap="#japan-map" alt="日本地図" >
+</section>
+<section class="legend">
+  <ul>
+    <li class="bg-yellow">
+      <span class="color-yellow"></span>
+      <span class="label">北部方面隊</span>
+      <span class="units">第2師団：第5旅団：第7師団：第11旅団</span>
+    </li>
+
+    <li class="bg-pink">
+      <span class="color-pink"></span>
+      <span class="label">東北方面隊</span>
+      <span class="units">第6師団：第9師団</span>
+    </li>
+
+    <li class="bg-green">
+      <span class="color-green"></span>
+      <span class="label">東部方面隊</span>
+      <span class="units">第1師団：第12旅団</span>
+    </li>
+
+    <li class="bg-orange">
+      <span class="color-orange"></span>
+      <span class="label">中部方面隊</span>
+      <span class="units">第3師団：第10師団：第13旅団：第14旅団</span>
+    </li>
+
+    <li class="bg-bluepink">
+      <span class="color-bluepink"></span>
+      <span class="label">西部方面隊</span>
+      <span class="units">第4師団：第8師団：第15旅団</span>
+    </li>
+  </ul>
+</section>
+        </main>
+<script src="./js/script.js"></script>
+    </body>
+</html>
 
 
     </body>
