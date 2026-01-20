@@ -50,11 +50,11 @@
 
 /* メイン動画 */
 .TK {
-  width: 90%;
-  max-width: 800px;
+    width: 100%;
+  max-width: 1200px;   
   height: auto;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* 背景・フォント */
@@ -194,6 +194,24 @@ body {
 .description p {
     margin-bottom: 1.2em;
 }
+/* ===== PC向けのレスポンシブ調整 ===== */
+@media (min-width: 900px) {
+  .details,
+  .description {
+    max-width: 1600px; /* PCサイズ */
+    padding: 30px 40px; /* 余白を増やす */
+    font-size: 1.15rem; /* 文字の大きさ */
+    line-height: 1.95;
+  }
+
+  .details h4 {
+    font-size: 2rem;
+  }
+
+  .description h3 {
+    font-size: 1.9rem;
+  }
+}
 
 
 /*選択バー*/
@@ -228,7 +246,7 @@ body {
 /* 画像と動画の切り替え用（ホバー動画対応） */
 .tank-media {
   position: relative;
-  width: 100%;
+  width: calc(50% - 1em);
   overflow: hidden;
 }
 
@@ -254,6 +272,21 @@ body {
 
 /* スマホ対応 */
 @media (max-width: 600px) {
+    .tank-media {
+        width: 100%;
+    }  
+
+    /*動画サイズ*/
+  .TK {
+    width: 100%;
+    height: auto;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+
+    /* 戦車詳細セクション */
     .details {
         padding: 0 15px;
     }
@@ -266,17 +299,12 @@ body {
         font-size: 1.25rem;
     }
 
-
-     .tank-media {
-         width: 100%;
-  }
-
   /* 戦車解説セクション */
     .description {
         padding: 18px 15px;
         margin: 30px 10px;
         font-size: 1rem;
     }
-}
 
-
+    
+  }
