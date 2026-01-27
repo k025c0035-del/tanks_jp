@@ -43,7 +43,7 @@
   top: 15px;
   right: 15px;
   padding: 0.5em 1.2em;
-  background-color: #165e04;
+  background-color: #336d7c;
   border: 2px solid #ffffff;
   border-radius: 6px;
   color: #ffffff;
@@ -60,12 +60,15 @@
 
 
 /* メイン動画 */
+
 .TK {
     width: 100%;
-  max-width: 1200px;   
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px; /* 追加 */
+    overflow: hidden;    /* 追加 */
 }
 
 /* 背景・フォント */
@@ -261,13 +264,7 @@ body {
   overflow: hidden;
 }
 
-.tank-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none; /* 初期状態は非表示 */
 
-}
 
 /*リンク拡張*/
 .tank-card .tank-image {
@@ -298,11 +295,7 @@ body {
         width: 100%;
     }  
 
-    /*動画サイズ*/
-  .TK {
-    width: 100%;
-    height: auto;
-  }
+  
   
   body {
     font-size: 14px;

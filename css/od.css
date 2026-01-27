@@ -1,0 +1,30 @@
+.player {
+  width: 300px;
+  padding: 20px;
+  margin: 40px auto;
+  background: #222;
+  color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.controls button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.seek input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.time {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
