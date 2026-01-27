@@ -24,6 +24,17 @@
   position: relative;
 }
 
+.site-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: 60px;     /* 正方形にする */
+  border-radius: 50%; /* ←丸くする */
+  object-fit: cover;  
+  z-index: 10;
+}
+
 /* ホームボタン */
 .home-button {
   position: absolute;
@@ -228,6 +239,86 @@ body {
 .bg-bluepink {
   background: linear-gradient(90deg, rgba(88, 184, 240, 0.25) 30%, rgba(250, 213, 231, 0.25) 70%);}
 
+/* メディアクエリ */
+/* 全体のベース設定 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* セクション全体 */
+.jgsdf-overview {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* 見出しデザイン */
+.jgsdf-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #2c6e91;
+  padding-left: 12px;
+  color: #2c6e91;
+}
+
+.jgsdf-overview h3 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #244b63;
+  border-bottom: 2px solid #d0d7de;
+  padding-bottom: 6px;
+}
+
+.jgsdf-overview h4 {
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #3a5f7d;
+}
+
+/* 各章をカード風に */
+.jgsdf-overview section {
+  background: #ffffff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* リスト */
+.jgsdf-overview ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.jgsdf-overview li {
+  margin-bottom: 6px;
+}
+
+/* 段落 */
+.jgsdf-overview p {
+  margin-bottom: 15px;
+}
+
+
+/* 更新日フッター */
+.update-info {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.update-info p {
+  margin: 0;
+}
+
 
   
 /* デスクトップ用（幅600px以上のサイズ） */
@@ -360,6 +451,22 @@ body {
     aspect-ratio: 5 / 3; /* 画像と同じ比率にする */
   }
 }
+/* 自衛隊概要セクションのレスポンシブ調整 */
+  .jgsdf-overview section {
+    padding: 20px;
+  }
+
+  .jgsdf-overview h2 {
+    font-size: 1.6rem;
+  }
+
+  .jgsdf-overview h3 {
+    font-size: 1.3rem;
+  }
+
+  .jgsdf-overview h4 {
+    font-size: 1.1rem;
+  }
 
 /* tank-card 内の画像はここで強制 */
 .tank-card .tank-image {

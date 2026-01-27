@@ -26,6 +26,17 @@
   position: relative;
 }
 
+.site-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: 60px;     /* 正方形にする */
+  border-radius: 50%; /* ←丸くする */
+  object-fit: cover;  
+  z-index: 10;
+}
+
 /* ホームボタン */
 .home-button {
   position: absolute;
@@ -268,6 +279,17 @@ body {
 }
 
 
+/* 更新日フッター */
+.update-info {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.update-info p {
+  margin: 0;
+}
 
 
 /* スマホ対応 */
