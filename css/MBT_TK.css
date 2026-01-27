@@ -10,7 +10,9 @@
   top: 15px;
   left: 15px;
   width: 60px;
-  height: auto;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
   z-index: 10;
 }
 
@@ -21,20 +23,12 @@
   margin: 0.2em 0;
 }
 
-/* アイコン固定 */
 .intro {
   position: relative;
-}
-
-.site-icon {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 60px;
-  height: 60px;     /* 正方形にする */
-  border-radius: 50%; /* ←丸くする */
-  object-fit: cover;  
-  z-index: 10;
+  background-color: #a2beda;
+  color: white;
+  text-align: center;
+  padding: 2em;
 }
 
 /* ホームボタン */
@@ -51,24 +45,21 @@
   text-decoration: none;
   transition: 0.25s ease;
 }
-/* ホバー時の反応 */
 .home-button:hover {
   background-color: #333;
   color: #fff;
   transform: translateY(-2px);
 }
 
-
 /* メイン動画 */
-
 .TK {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px; /* 追加 */
-    overflow: hidden;    /* 追加 */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 /* 背景・フォント */
@@ -80,13 +71,6 @@ body {
   padding: 0;
 }
 
-.intro {
-  background-color: #a2beda;
-  color: white;
-  text-align: center;
-  padding: 2em;
-}
-
 .gallery {
   background-color: #e0f7fa;
   border: 1px solid #ccc;
@@ -96,22 +80,31 @@ body {
 }
 
 /* ------------------------------
-   戦車カード
+   戦車カード（ここを整理）
 ------------------------------ */
 
+/* 画像一覧：スマホ2列 */
 .tank-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 
+/* PC：6列 */
+@media (min-width: 1024px) {
+  .tank-images {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* カード本体 */
 .tank-media {
-  width: calc(50% - 1em);
   position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
-/* 画像・動画を後ろに固定 */
+/* 画像 */
 .tank-image,
 .tank-video {
   width: 100%;
@@ -121,7 +114,7 @@ body {
   border: 2px solid #aaa;
 }
 
-/* ラベルを前面に固定 */
+/* ラベル */
 .tank-label {
   position: absolute;
   z-index: 10;
@@ -139,107 +132,101 @@ body {
   text-overflow: ellipsis;
 }
 
-/* ===== 戦車詳細セクション ===== */
+/* ------------------------------
+   戦車詳細セクション
+------------------------------ */
 
 .details {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-    line-height: 1.8;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.8;
 }
 
 .details h4 {
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    border-left: 6px solid #556b2f;
-    padding-left: 12px;
-    color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-left: 6px solid #556b2f;
+  padding-left: 12px;
+  color: #333;
 }
 
-/* 各戦車の詳細カード */
 .tank-detail {
-    background: #fafafa;
-    border-left: 5px solid #6b8e23;
-    padding: 18px 20px;
-    margin-bottom: 25px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition: transform .2s ease, box-shadow .2s ease;
+  background: #fafafa;
+  border-left: 5px solid #6b8e23;
+  padding: 18px 20px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-
 .tank-detail:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .tank-detail h5 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #2f4f4f;
-    font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #2f4f4f;
+  font-weight: 700;
 }
 
 .tank-detail p {
-    font-size: 1rem;
-    color: #444;
-    margin: 0;
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
 }
-/* 戦車解説セクション */
+
+/* 解説セクション */
 .description {
-    max-width: 900px;          
-    margin: 50px auto;         
-    padding: 25px 30px;        /* 内側余白 */
-    background: #f0f8ff;       
-    border-left: 6px solid #6b8e23; 
-    border-radius: 8px;
-    line-height: 1.9;
-    font-size: 1.05rem;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 25px 30px;
+  background: #f0f8ff;
+  border-left: 6px solid #6b8e23;
+  border-radius: 8px;
+  line-height: 1.9;
+  font-size: 1.05rem;
 }
 
-/* 見出し */
 .description h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.7rem;
-    color: #2f4f4f;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+  color: #2f4f4f;
 }
 
-/* 段落 */
 .description p {
-    margin-bottom: 1.2em;
+  margin-bottom: 1.2em;
 }
-/* ===== PC向けのレスポンシブ調整 ===== */
+
+/* PC向け調整 */
 @media (min-width: 900px) {
   .details,
   .description {
-    max-width: 1600px; /* PCサイズ */
-    padding: 30px 40px; /* 余白を増やす */
-    font-size: 1.15rem; /* 文字の大きさ */
+    max-width: 1600px;
+    padding: 30px 40px;
+    font-size: 1.15rem;
     line-height: 1.95;
   }
-
   .details h4 {
     font-size: 2rem;
   }
-
   .description h3 {
     font-size: 1.9rem;
   }
 }
 
-
-/*選択バー*/
+/* 選択バー */
 .category ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .category li {
   margin: 10px 0;
 }
-
-/*選択バーの色とサイズ*/
 .category li a {
   display: block;
   padding: 12px 16px;
@@ -250,31 +237,10 @@ body {
   background-color: #f8f8f8;
   transition: 0.2s;
 }
-
-/* ホバー時の効果 */
 .category li a:hover {
   background-color: #e0e0e0;
   border-color: #000;
 }
-
-/* 画像と動画の切り替え用（ホバー動画対応） */
-.tank-media {
-  position: relative;
-  width: calc(50% - 1em);
-  overflow: hidden;
-}
-
-
-
-/*リンク拡張*/
-.tank-card .tank-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  margin: 0 !important;
-  border: none !important;
-}
-
 
 /* 更新日フッター */
 .update-info {
@@ -283,43 +249,27 @@ body {
   color: #666;
   font-size: 0.9rem;
 }
-
 .update-info p {
   margin: 0;
 }
 
-
-/* スマホ対応 */
+/* スマホ調整 */
 @media (max-width: 600px) {
-    .tank-media {
-        width: 100%;
-    }  
-
-  
-  
   body {
     font-size: 14px;
   }
-
-    /* 戦車詳細セクション */
-    .details {
-        padding: 0 15px;
-    }
-
-    .tank-detail {
-        padding: 15px;
-    }
-
-    .tank-detail h5 {
-        font-size: 1.25rem;
-    }
-
-  /* 戦車解説セクション */
-    .description {
-        padding: 18px 15px;
-        margin: 30px 10px;
-        font-size: 1rem;
-    }
-
-    
+  .details {
+    padding: 0 15px;
   }
+  .tank-detail {
+    padding: 15px;
+  }
+  .tank-detail h5 {
+    font-size: 1.25rem;
+  }
+  .description {
+    padding: 18px 15px;
+    margin: 30px 10px;
+    font-size: 1rem;
+  }
+}

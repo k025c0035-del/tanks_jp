@@ -1,14 +1,18 @@
 @charset "UTF-8";
 
-/*共通*/
-/*アイコン*/
+/* ===============================
+   共通スタイル
+=============================== */
+
 /* 左上アイコン */
 .site-icon {
   position: absolute;
   top: 15px;
   left: 15px;
   width: 60px;
-  height: auto;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
   z-index: 10;
 }
 
@@ -19,20 +23,13 @@
   margin: 0.2em 0;
 }
 
-/*アイコンを固定 */
+/* intro */
 .intro {
   position: relative;
-}
-
-.site-icon {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 60px;
-  height: 60px;     /* 正方形にする */
-  border-radius: 50%; /* ←丸くする */
-  object-fit: cover;  
-  z-index: 10;
+  background-color: #a2beda;
+  color: white;
+  text-align: center;
+  padding: 2em;
 }
 
 /* ホームボタン */
@@ -49,205 +46,24 @@
   text-decoration: none;
   transition: 0.25s ease;
 }
-
-/* ホバー時の反応 */
 .home-button:hover {
   background-color: #333;
   color: #fff;
   transform: translateY(-2px);
 }
 
-
-/*動画*/
+/* 動画 */
 .TK {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px; /* 追加 */
-    overflow: hidden;    /* 追加 */
-}
-
-/*webの囲い*/
-body {
-  font-family: 'Noto Serif JP', serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-.intro {
-  background-color: #a2beda;
-  color: white;
-  text-align: center;
-  padding: 2em;
-}
-
-.gallery, .category {
-  background-color: #e0f7fa;
-  border: 1px solid #ccc;
-  margin: 1em;
-  padding: 1em;
-  border-radius: 8px;
-}
-
-.tank-images img {
-  width: 200px;
-  margin: 0.5em;
-  border-radius: 6px;
-  border: 2px solid #aaa;
-}
-
-.main-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  list-style: none;
-  padding: 0;
-  background-color: #ddd;
-}
-
-.main-nav li a {
-  text-decoration: none;
-  padding: 0.5em 1em;
-  background-color: #fff;
-  border-radius: 4px;
-  color: #333;
-}
-
-
-/* メイン一覧・画像＋文字の重ね合わせ用 */
-.tank-card {
-  position: relative;
-  display: inline-block;
-}
-
-/*画像背景*/
-.tank-card img {
-  display: block;
-}
-
-/* 画像上の文字 */
-.tank-label {
-  /*中央揃え・改行補正*/
-  max-width: 90%;  
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  /*文字の調整*/
-  position: absolute;
-  bottom: 10px;               
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-shadow: 10 7 6px rgba(0,0,0,0.7); /*文字の影*/
-  background: rgba(0,0,0,0.3); /*文字の囲い*/
-  padding: 8px 12px;
-  border-radius: 15px;
-  pointer-events: none;      
-}
-
-
-/*選択バー*/
-.category ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.category li {
-  margin: 10px 0;
-}
-
-/*選択バーの色とサイズ*/
-.category li a {
-  display: block;
-  padding: 12px 16px;
-  border: 2px solid #333;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #333;
-  background-color: #f8f8f8;
-  transition: 0.2s;
-}
-
-/* ホバー時の効果 */
-.category li a:hover {
-  background-color: #e0e0e0;
-  border-color: #000;
-}
-
-/* 画像と動画の切り替え用（ホバー動画対応） */
-.tank-media {
-  position: relative;
   width: 100%;
-  overflow: hidden;
-}
-
-.tank-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none; /* 初期状態は非表示 */
-
-}
-
-/*リンク拡張*/
-.tank-card .tank-image {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  margin: 0 !important;
-  border: none !important;
-}
-
-
-/*日本地図*/
-
-/*日本地図中央揃え*/
-.JPimg {
-  display: flex;
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center;     /* 縦方向の中央揃え（必要なら） */
-  width: 100%;
-}
-
-.JPimg img {
-  max-width: 100%;
+  max-width: 800px;
   height: auto;
   display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-/*日本地図の詳細説明*/
-.legend ul {
-  list-style: none;
-  padding: 0;
-}
-
-.legend li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  margin-bottom: 6px;
-}
-
-/* 行全体の背景色 */
-.bg-yellow { background: linear-gradient(90deg, rgba(255, 255, 0, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
-.bg-pink { background: linear-gradient(90deg,  rgba(220, 112, 253, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
-.bg-green { background: linear-gradient(90deg, rgba(76, 175, 80, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
-.bg-orange { background: linear-gradient(90deg, rgba(255, 136, 0, 0.3) 30%, rgba(250, 213, 231, 0.25) 70%);}
-.bg-bluepink {
-  background: linear-gradient(90deg, rgba(88, 184, 240, 0.25) 30%, rgba(250, 213, 231, 0.25) 70%);}
-
-/* メディアクエリ */
-/* 全体のベース設定 */
+/* body */
 body {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.8;
@@ -257,225 +73,87 @@ body {
   color: #333;
 }
 
-/* セクション全体 */
-.jgsdf-overview {
-  max-width: 1500px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* セクション囲い */
+.gallery,
+.category {
+  background-color: #e0f7fa;
+  border: 1px solid #ccc;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 8px;
 }
 
-/* 見出しデザイン */
-.jgsdf-overview h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  border-left: 6px solid #2c6e91;
-  padding-left: 12px;
-  color: #2c6e91;
+/* ナビ */
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  background-color: #ddd;
+}
+.main-nav li a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #333;
 }
 
-.jgsdf-overview h3 {
-  font-size: 1.5rem;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  color: #244b63;
-  border-bottom: 2px solid #d0d7de;
-  padding-bottom: 6px;
+/* ===============================
+   戦車カード
+=============================== */
+
+/* カード全体 */
+.tank-card {
+  position: relative;
+  display: inline-block;
 }
 
-.jgsdf-overview h4 {
-  font-size: 1.2rem;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  color: #3a5f7d;
-}
-
-/* 各章をカード風に */
-.jgsdf-overview section {
-  background: #ffffff;
-  padding: 25px 30px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-}
-
-/* リスト */
-.jgsdf-overview ul {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.jgsdf-overview li {
-  margin-bottom: 6px;
-}
-
-/* 段落 */
-.jgsdf-overview p {
-  margin-bottom: 15px;
-}
-
-
-/* 更新日フッター */
-.update-info {
-  text-align: center;
-  margin: 40px 0 20px;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.update-info p {
-  margin: 0;
-}
-
-
-  
-/* デスクトップ用（幅600px以上のサイズ） */
-@media screen and (min-width: 600px) {
-    /*タイトル（h1）*/
-  .intro h1 {
-    font-size: 2.8rem;      
-    margin-bottom: 0.5em;
-  }
-
-  /*サブタイトル（h2）*/
-.intro h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
-  }
-
-  /*動画サイズ*/
-  .TK {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }  
-  body {
-    font-size: 18px;
-  }
-
+/* tank-media（画像 or 動画） */
 .tank-media {
   position: relative;
-  width: 250px;   /* PC用の画像サイズに合わせる */
-  height: 160px;  
+  width: 100%;
   overflow: hidden;
 }
 
-  /*メイン一覧・画像サイズ*/
-  .tank-images img,
-  .tank-media video {
-    width: 250px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .intro video {
-    width: 100%;
-    max-width: 1200px;   /* サイズ変更可 */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-
-  /* 画像を横並びで大きめに */
-  .tank-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-/* 画像と動画を完全に重ねる */
+/* 画像・動画 */
 .tank-image,
+.tank-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .tank-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 画像と動画の見え方を統一 */
-}
-
-/* 初期状態は動画を非表示 */
-.tank-video {
   display: none;
-
 }
 
+/* 画像上のラベル */
+.tank-label {
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3);
+  padding: 8px 12px;
+  border-radius: 15px;
+  pointer-events: none;
 }
 
-
-/* スマホ用（幅600px以下） */
-@media screen and (max-width: 600px) {
-
-    /*タイトル（h1）*/
-  .intro h1 {
-    font-size: 2rem;
-  }
-
-  .intro h2 {
-    font-size: 1.4rem;
-  }
-
-    /*動画サイズ*/
-  .TK {
-    width: 100%;
-    height: auto;
-  }
-  
-  body {
-    font-size: 14px;
-  }
-  
-/*画像サイズ*/
-  .tank-images img,
-  .tank-media video { 
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .category li a {
-    font-size: 14px;
-    padding: 10px;
-  }
-    /* 動画をスマホ幅にフィット */
-  .intro video {
-    width: 100%;
-    height: auto;;
-  }
-
-  .tank-media {
-    height: auto;
-  }
-
-  .tank-media {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 5 / 3; /* 画像と同じ比率にする */
-  }
-}
-/* 自衛隊概要セクションのレスポンシブ調整 */
-  .jgsdf-overview section {
-    padding: 20px;
-  }
-
-  .jgsdf-overview h2 {
-    font-size: 1.6rem;
-  }
-
-  .jgsdf-overview h3 {
-    font-size: 1.3rem;
-  }
-
-  .jgsdf-overview h4 {
-    font-size: 1.1rem;
-  }
-
-/* tank-card 内の画像はここで強制 */
+/* tank-card 内の画像強制 */
 .tank-card .tank-image {
   width: 100% !important;
   height: 100% !important;
@@ -484,3 +162,156 @@ body {
   border: none !important;
 }
 
+/* ===============================
+   日本地図
+=============================== */
+
+.JPimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.JPimg img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 地図の凡例 */
+.legend ul {
+  list-style: none;
+  padding: 0;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/* 背景色 */
+.bg-yellow { background: linear-gradient(90deg, rgba(255,255,0,0.3) 30%, rgba(250,213,231,0.25) 70%); }
+.bg-pink   { background: linear-gradient(90deg, rgba(220,112,253,0.3) 30%, rgba(250,213,231,0.25) 70%); }
+.bg-green  { background: linear-gradient(90deg, rgba(76,175,80,0.3) 30%, rgba(250,213,231,0.25) 70%); }
+.bg-orange { background: linear-gradient(90deg, rgba(255,136,0,0.3) 30%, rgba(250,213,231,0.25) 70%); }
+.bg-bluepink {
+  background: linear-gradient(90deg, rgba(88,184,240,0.25) 30%, rgba(250,213,231,0.25) 70%);
+}
+
+/* ===============================
+   自衛隊概要セクション
+=============================== */
+
+.jgsdf-overview {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.jgsdf-overview section {
+  background: #ffffff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+.jgsdf-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #2c6e91;
+  padding-left: 12px;
+  color: #2c6e91;
+}
+.jgsdf-overview h3 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #244b63;
+  border-bottom: 2px solid #d0d7de;
+  padding-bottom: 6px;
+}
+.jgsdf-overview h4 {
+  font-size: 1.2rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #3a5f7d;
+}
+
+/* ===============================
+   更新日
+=============================== */
+
+.update-info {
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+.update-info p {
+  margin: 0;
+}
+
+/* ===============================
+   メディアクエリ
+=============================== */
+
+/* PC（600px以上） */
+@media screen and (min-width: 600px) {
+
+  .intro h1 { font-size: 2.8rem; }
+  .intro h2 { font-size: 2rem; }
+
+  body { font-size: 18px; }
+
+  .tank-media {
+    width: 250px;
+    height: 160px;
+  }
+
+  .tank-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tank-image,
+  .tank-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .intro video {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+/* スマホ（600px以下） */
+@media screen and (max-width: 600px) {
+
+  .intro h1 { font-size: 2rem; }
+  .intro h2 { font-size: 1.4rem; }
+
+  body { font-size: 14px; }
+
+  .tank-images img,
+  .tank-media video {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .tank-media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+  }
+
+  .category li a {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
